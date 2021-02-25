@@ -1,0 +1,26 @@
+.container {
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-next {
+  background-color: rgb(25, 90, 211);
+  box-shadow: 4px 4px 10px #8c8c8c;
+  border: none;
+  border-radius: 24px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 1.5rem 5rem;
+  min-width: 150px;
+  font-size: 24px;
+
+  &:hover {
+    background-color: rgb(10, 73, 189);
+    box-shadow: 4px 4px 10px #727272;
+  }
+}
