@@ -1,3 +1,20 @@
 <div class="container">
-  <button class="btn btn-next" (click)="next()">Следующий клиент</button>
+  <div class="wrappper">
+    <div class="numbers">
+      <div class="number prev">
+        {{ currentUserId > 0 ? currentUserId - 1 : "" }}
+      </div>
+      <div class="number current">{{ currentUserId }}</div>
+      <div class="number next">
+        {{ currentUserId !== totalUserAmount ? currentUserId + 1 : "" }}
+      </div>
+    </div>
+    <button
+      class="btn btn-next"
+      (click)="next()"
+      [disabled]="currentUserId === totalUserAmount"
+    >
+      Вызвать следующую
+    </button>
+  </div>
 </div>

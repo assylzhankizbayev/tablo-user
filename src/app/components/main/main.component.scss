@@ -23,4 +23,27 @@
     background-color: rgb(10, 73, 189);
     box-shadow: 4px 4px 10px #727272;
   }
+
+  &:disabled {
+    background-color: rgb(59, 75, 105);
+    cursor: default;
+  }
+}
+
+.numbers {
+  font-size: 96px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 0 2rem;
+
+  .current {
+    color: red;
+    font-size: 120%;
+  }
+
+  .number {
+    flex: 1;
+    text-align: center;
+  }
 }
