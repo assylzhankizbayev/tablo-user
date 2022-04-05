@@ -27,8 +27,8 @@ export class MainComponent implements OnInit, OnDestroy {
       .subscribe(({ regIdx, calIdx }) => {
         console.log('init', regIdx, calIdx);
 
-        this.totalUserAmount = regIdx || 0;
-        this.currentUserId = calIdx || 0;
+        this.totalUserAmount = regIdx ? regIdx - 1 : 0;
+        this.currentUserId = calIdx ? calIdx - 1 : 0;
       });
 
     this.webSocket
@@ -43,7 +43,7 @@ export class MainComponent implements OnInit, OnDestroy {
       .listen('registered-users-amount')
       .pipe(takeUntil(this.destroy$))
       .subscribe((data) => {
-        this.totalUserAmount = data.amount;
+        this.totalUserAmount = data.amount - 1;
         console.log('Accept total users amount', this.totalUserAmount);
       });
   }
