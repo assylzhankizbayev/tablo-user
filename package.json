@@ -4,8 +4,7 @@
   "scripts": {
     "start": "ng serve",
     "dev": "ng serve --port 4205 --open",
-    "build": "ng build",
-    "buildProd": "ng build --configuration=production"
+    "build": "ng build --configuration=production"
   },
   "private": true,
   "dependencies": {
